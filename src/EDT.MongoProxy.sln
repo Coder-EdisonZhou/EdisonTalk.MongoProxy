@@ -7,9 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{192E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{198BC96C-988A-4181-A421-15B33C8812C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDT.MongoProxy.Shared", "EDT.MongoProxy.Shared\EDT.MongoProxy.Shared.csproj", "{CA048D94-57AE-4CC4-86F1-990DA15BD0B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDT.MongoProxy", "EDT.MongoProxy.Shared\EDT.MongoProxy.csproj", "{CA048D94-57AE-4CC4-86F1-990DA15BD0B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDT.MongoProxy.Shared.UnitTests", "EDT.MongoProxy.Shared.UnitTests\EDT.MongoProxy.Shared.UnitTests.csproj", "{DD172497-480A-4D76-94EE-4D8AA737481F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDT.MongoProxy.UnitTests", "EDT.MongoProxy.Shared.UnitTests\EDT.MongoProxy.UnitTests.csproj", "{DD172497-480A-4D76-94EE-4D8AA737481F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDT.MongoProxy.Abstration", "EDT.MongoProxy.Abstration\EDT.MongoProxy.Abstration.csproj", "{92E0AC5D-358C-4D3D-AABB-31072983D48E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{DD172497-480A-4D76-94EE-4D8AA737481F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD172497-480A-4D76-94EE-4D8AA737481F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD172497-480A-4D76-94EE-4D8AA737481F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E0AC5D-358C-4D3D-AABB-31072983D48E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E0AC5D-358C-4D3D-AABB-31072983D48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E0AC5D-358C-4D3D-AABB-31072983D48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E0AC5D-358C-4D3D-AABB-31072983D48E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CA048D94-57AE-4CC4-86F1-990DA15BD0B6} = {192E258A-4ED1-43CC-B842-DA01EC2A5923}
 		{DD172497-480A-4D76-94EE-4D8AA737481F} = {198BC96C-988A-4181-A421-15B33C8812C1}
+		{92E0AC5D-358C-4D3D-AABB-31072983D48E} = {192E258A-4ED1-43CC-B842-DA01EC2A5923}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FEA823C4-24DC-46D8-A21F-89FD507180AF}

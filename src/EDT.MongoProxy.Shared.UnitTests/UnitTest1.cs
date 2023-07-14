@@ -1,4 +1,4 @@
-namespace EDT.MongoProxy.Shared.UnitTests
+namespace EDT.MongoProxy.UnitTests
 {
     public class UnitTest1
     {
