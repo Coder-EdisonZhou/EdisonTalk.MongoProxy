@@ -33,14 +33,14 @@ public interface IMongoRepositoryBase<TEntity> where TEntity : MongoEntityBase, 
 
     #region Read Part
 
-    Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, bool readFromPrimary = false);
-    Task<TEntity> GetAsync(string id, bool readFromPrimary = false);
-    Task<IEnumerable<TEntity>> GetAllAsync(bool readFromPrimary = false);
-    Task<long> CountAsync(Expression<Func<TEntity, bool>> expression, bool readFromPrimary = false);
-    Task<long> CountAsync(FilterDefinition<TEntity> filter, bool readFromPrimary = false);
-    Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate, bool readFromPrimary = false);
-    Task<List<TEntity>> FindListAsync(FilterDefinition<TEntity> filter, string[]? field = null, SortDefinition<TEntity>? sort = null, bool readFromPrimary = false);
-    Task<List<TEntity>> FindListByPageAsync(FilterDefinition<TEntity> filter, int pageIndex, int pageSize, string[]? field = null, SortDefinition<TEntity>? sort = null, bool readFromPrimary = false);
+    Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, bool readFromPrimary = true);
+    Task<TEntity> GetAsync(string id, bool readFromPrimary = true);
+    Task<IEnumerable<TEntity>> GetAllAsync(bool readFromPrimary = true);
+    Task<long> CountAsync(Expression<Func<TEntity, bool>> expression, bool readFromPrimary = true);
+    Task<long> CountAsync(FilterDefinition<TEntity> filter, bool readFromPrimary = true);
+    Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate, bool readFromPrimary = true);
+    Task<List<TEntity>> FindListAsync(FilterDefinition<TEntity> filter, string[]? field = null, SortDefinition<TEntity>? sort = null, bool readFromPrimary = true);
+    Task<List<TEntity>> FindListByPageAsync(FilterDefinition<TEntity> filter, int pageIndex, int pageSize, string[]? field = null, SortDefinition<TEntity>? sort = null, bool readFromPrimary = true);
 
     #endregion
 }

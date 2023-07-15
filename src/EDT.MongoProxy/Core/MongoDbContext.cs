@@ -3,7 +3,7 @@
 public class MongoDbContext : IMongoDbContext
 {
     private readonly IMongoDatabase _database;
-    private readonly MongoClient _mongoClient;
+    private readonly IMongoClient _mongoClient;
     private readonly IList<Func<IClientSessionHandle, Task>> _commands
         = new List<Func<IClientSessionHandle, Task>>();
 

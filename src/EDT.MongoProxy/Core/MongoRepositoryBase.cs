@@ -167,7 +167,7 @@ public class MongoRepositoryBase<TEntity> : IMongoRepositoryBase<TEntity>
 
     #region Read Part
 
-    public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, bool readFromPrimary = false)
+    public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, bool readFromPrimary = true)
     {
         var readPreference = GetReadPreference(readFromPrimary);
         var queryData = await _dbSet.WithReadPreference(readPreference)
@@ -176,39 +176,39 @@ public class MongoRepositoryBase<TEntity> : IMongoRepositoryBase<TEntity>
         return queryData;
     }
 
-    public async Task<TEntity> GetAsync(string id, bool readFromPrimary = false)
+    public async Task<TEntity> GetAsync(string id, bool readFromPrimary = true)
     {
         var readPreference = GetReadPreference(readFromPrimary);
         var queryData = await _dbSet.WithReadPreference(readPreference).FindAsync(Builders<TEntity>.Filter.Eq(_keyField, new ObjectId(id)));
         return queryData.FirstOrDefault();
     }
 
-    public async Task<IEnumerable<TEntity>> GetAllAsync(bool readFromPrimary = false)
+    public async Task<IEnumerable<TEntity>> GetAllAsync(bool readFromPrimary = true)
     {
         var readPreference = GetReadPreference(readFromPrimary);
         var queryAllData = await _dbSet.WithReadPreference(readPreference).FindAsync(Builders<TEntity>.Filter.Empty);
         return queryAllData.ToList();
     }
 
-    public async Task<long> CountAsync(Expression<Func<TEntity, bool>> expression, bool readFromPrimary = false)
+    public async Task<long> CountAsync(Expression<Func<TEntity, bool>> expression, bool readFromPrimary = true)
     {
         var readPreference = GetReadPreference(readFromPrimary);
         return await _dbSet.WithReadPreference(readPreference).CountDocumentsAsync(expression);
     }
 
-    public async Task<long> CountAsync(FilterDefinition<TEntity> filter, bool readFromPrimary = false)
+    public async Task<long> CountAsync(FilterDefinition<TEntity> filter, bool readFromPrimary = true)
     {
         var readPreference = GetReadPreference(readFromPrimary);
         return await _dbSet.WithReadPreference(readPreference).CountDocumentsAsync(filter);
     }
 
-    public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate, bool readFromPrimary = false)
+    public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate, bool readFromPrimary = true)
     {
         var readPreference = GetReadPreference(readFromPrimary);
         return await Task.FromResult(_dbSet.WithReadPreference(readPreference).AsQueryable().Any(predicate));
     }
 
-    public async Task<List<TEntity>> FindListAsync(FilterDefinition<TEntity> filter, string[]? field = null, SortDefinition<TEntity>? sort = null, bool readFromPrimary = false)
+    public async Task<List<TEntity>> FindListAsync(FilterDefinition<TEntity> filter, string[]? field = null, SortDefinition<TEntity>? sort = null, bool readFromPrimary = true)
     {
         var readPreference = GetReadPreference(readFromPrimary);
         if (field == null || field.Length == 0)
@@ -233,7 +233,7 @@ public class MongoRepositoryBase<TEntity> : IMongoRepositoryBase<TEntity>
         return await _dbSet.WithReadPreference(readPreference).Find(filter).Sort(sort).Project<TEntity>(projection).ToListAsync();
     }
 
-    public async Task<List<TEntity>> FindListByPageAsync(FilterDefinition<TEntity> filter, int pageIndex, int pageSize, string[]? field = null, SortDefinition<TEntity>? sort = null, bool readFromPrimary = false)
+    public async Task<List<TEntity>> FindListByPageAsync(FilterDefinition<TEntity> filter, int pageIndex, int pageSize, string[]? field = null, SortDefinition<TEntity>? sort = null, bool readFromPrimary = true)
     {
         var readPreference = GetReadPreference(readFromPrimary);
         if (field == null || field.Length == 0)
