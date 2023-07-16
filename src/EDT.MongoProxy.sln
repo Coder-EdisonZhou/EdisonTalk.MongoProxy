@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDT.MongoProxy", "EDT.Mongo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDT.MongoProxy.UnitTests", "EDT.MongoProxy.UnitTests\EDT.MongoProxy.UnitTests.csproj", "{DD172497-480A-4D76-94EE-4D8AA737481F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDT.MongoProxy.Abstration", "EDT.MongoProxy.Abstration\EDT.MongoProxy.Abstration.csproj", "{92E0AC5D-358C-4D3D-AABB-31072983D48E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDT.MongoProxy.Abstration", "EDT.MongoProxy.Abstration\EDT.MongoProxy.Abstration.csproj", "{92E0AC5D-358C-4D3D-AABB-31072983D48E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{D2E8F9F3-F8A8-436D-BB5E-1EB06D0C4415}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
