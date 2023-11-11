@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
-namespace EDT.MongoProxy.Abstration;
+namespace EdisonTalk.MongoProxy.Abstration;
 
 public abstract class MongoEntityBase
 {

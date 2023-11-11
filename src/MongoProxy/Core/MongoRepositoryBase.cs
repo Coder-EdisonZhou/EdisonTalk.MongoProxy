@@ -1,8 +1,8 @@
-﻿using EDT.MongoProxy.Utils;
+﻿using EdisonTalk.MongoProxy.Utils;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq.Expressions;
 
-namespace EDT.MongoProxy.Core;
+namespace EdisonTalk.MongoProxy.Core;
 
 public class MongoRepositoryBase<TEntity> : IMongoRepositoryBase<TEntity>
         where TEntity : MongoEntityBase, new()

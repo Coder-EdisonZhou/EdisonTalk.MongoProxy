@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace EDT.MongoProxy.Abstration;
+namespace EdisonTalk.MongoProxy.Abstration;
 
 public interface IUnitOfWork : IDisposable
 {

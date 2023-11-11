@@ -1,4 +1,4 @@
-# EDT.MongoProxy
+# EdisonTalk.MongoProxy
 A shared library to provide access and operate MongoDB via Repository and UnitOfWork for ASP.NET Core projects
 [asp.net core](doc/aspnet_core_logo.png)
 

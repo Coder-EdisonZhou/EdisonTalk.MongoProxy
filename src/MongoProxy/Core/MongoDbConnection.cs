@@ -1,4 +1,6 @@
-﻿namespace EDT.MongoProxy.Core;
+﻿using EdisonTalk.MongoProxy.Configurations;
+
+namespace EdisonTalk.MongoProxy.Core;
 
 public class MongoDbConnection : IMongoDbConnection
 {

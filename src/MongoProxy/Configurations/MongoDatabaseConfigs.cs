@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 
-namespace EDT.MongoProxy.Configurations;
+namespace EdisonTalk.MongoProxy.Configurations;
 
 //// ++++++++++++++++++++++
 //// MongoDB
@@ -12,7 +12,6 @@ namespace EDT.MongoProxy.Configurations;
   "ReplicaSetName": "edt-replica",
   "DatabaseName": "EDT_Practices",
   "AuthDatabaseName": "admin",
-
   "ApplicationName": "Todo",
   "UserName": "service_testdev",
   "Password": "xxxxxxxxxxxxxxxxxxxxxxxx",

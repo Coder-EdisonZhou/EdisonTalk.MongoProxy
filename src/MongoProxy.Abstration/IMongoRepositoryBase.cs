@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver;
 using System.Linq.Expressions;
 
-namespace EDT.MongoProxy.Abstration;
+namespace EdisonTalk.MongoProxy.Abstration;
 
 public interface IMongoRepositoryBase<TEntity> where TEntity : MongoEntityBase, new()
 {

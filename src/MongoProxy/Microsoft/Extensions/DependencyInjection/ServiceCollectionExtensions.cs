@@ -1,4 +1,4 @@
-﻿using EDT.MongoProxy.Core;
+﻿using EdisonTalk.MongoProxy.Core;
 using Microsoft.Extensions.Options;
 
 namespace Microsoft.Extensions.DependencyInjection;

@@ -1,4 +1,4 @@
-namespace EDT.MongoProxy.UnitTests
+namespace EdisonTalk.MongoProxy.UnitTests
 {
     public class UnitTest1
     {

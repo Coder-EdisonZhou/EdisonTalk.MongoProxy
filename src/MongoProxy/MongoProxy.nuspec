@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>EdisonTalk.MongoProxy</id>
+    <version>0.0.6</version>
+    <title>EdisonTalk.MongoProxy</title>
+    <authors>EdisonZhou</authors>
+    <owners>EdisonTalk</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/Coder-EdisonZhou/EdisonTalk.MongoProxy</projectUrl>
+    <description>A powerful proxy to operate MongoDB via Repository and UnitOfWork for .NET Core projects.</description>
+    <copyright>Copyright © EdisonTalk 2023</copyright>
+    <dependencies>
+      <group targetFramework=".net6.0">
+        <dependency id="MongoDB.Driver" version="2.20.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\net6.0\*.dll" target="lib\net6.0" />
+    <file src="bin\Release\net6.0\*.pdb" target="lib\net6.0" />
+    <file src="bin\Release\net6.0\*.xml" target="lib\net6.0" />
+  </files>
+</package>

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Company>EdisonTalk</Company>
+    <Authors>EdisonZhou</Authors>
+    <Description>A proxy to operate MongoDB via Repository and UnitOfWork for .NET Core projects.</Description>
+    <Copyright>Copyright © EdisonTalk 2023</Copyright>
+    <RepositoryUrl>https://github.com/Coder-EdisonZhou/EdisonTalk.MongoProxy</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Title>MongoDB Proxy for ASP.NET Core projects</Title>
+    <PackageProjectUrl>https://github.com/Coder-EdisonZhou/EdisonTalk.MongoProxy</PackageProjectUrl>
+    <AssemblyName>EdisonTalk.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>EdisonTalk.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.20.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MongoProxy.Abstration\MongoProxy.Abstration.csproj" />
+  </ItemGroup>
+
+</Project>

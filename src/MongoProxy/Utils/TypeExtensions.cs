@@ -1,4 +1,4 @@
-﻿namespace EDT.MongoProxy.Utils;
+﻿namespace EdisonTalk.MongoProxy.Utils;
 
 public static class TypeExtensions
 {

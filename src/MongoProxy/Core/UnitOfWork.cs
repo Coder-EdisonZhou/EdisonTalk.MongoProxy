@@ -1,4 +1,4 @@
-﻿namespace EDT.MongoProxy.Core;
+﻿namespace EdisonTalk.MongoProxy.Core;
 
 public class UnitOfWork : IUnitOfWork
 {
